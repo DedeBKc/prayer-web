@@ -30,7 +30,13 @@ const Index = () => {
     return (
         <div className="container-fluid">
             <div className="row p-3 align-items-center">
-                <div className="col-2 bg-info"></div>
+                <div  style={{
+                            backgroundImage: "linear-gradient(#EEE,#555)",
+                        }} className="col-2 bg-info"><Image
+                            src={require("../public/calender.png")}
+                            alt="calender"
+                            width={200}
+                        /></div>
                 <div className="col-8">
                     <div
                         class="d-flex flex-row p-4"
@@ -62,7 +68,11 @@ const Index = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="col"></div>
+                <div className="col"><Image
+                                    src={require("../public/kiri.png")}
+                                    alt="kiri"
+                                    width={125}
+                                /></div>
                 <div className="col">
                     <Image
                         src={require("../public/bismillah.png")}
@@ -133,7 +143,12 @@ const Index = () => {
                         </div> */}
                     </div>
                 </div>
-                <div className="col"></div>
+                <div className="col"><Image
+                                    src={require("../public/kas.png")}
+                                    alt="kas"
+                                    width={125}
+                                    style={{ marginLeft: "60%" }}
+                                /></div>
             </div>
             <div className="row">
                 {renderSchedules("IMSYAK", "04:09")}
