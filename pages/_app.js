@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
 import "./styles.css";
 import "./cover.css";
-import React, { useEffect } from "react";
-import { Html, Main, NextScript } from "next/document";
+import React from "react";
 import Head from "next/head";
+import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
     return (
@@ -18,25 +18,11 @@ function MyApp({ Component, pageProps }) {
                     rel="stylesheet"
                 />
             </Head>
-            <body
-                style={{
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                    width: "100vw",
-                    height: "100vh",
-                    backgroundImage: 'url("/background.jpg")',
-                }}
-            >
+            <Layout>
                 <Component {...pageProps} />
-            </body>
+            </Layout>
         </React.Fragment>
     );
-
-    // useEffect(() => {
-    //     document.body.className = "bg-warning";
-    // });
-    // return <Component {...pageProps} />;
 }
 
 export default MyApp;

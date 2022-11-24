@@ -48,3 +48,20 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
+
+.kas {
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-image: url("/public/kas.png");
+}
+
+.row {
+    display: table;
+}
+
+.row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
