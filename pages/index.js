@@ -6,25 +6,108 @@ const Index = () => {
     const renderLeftInformation = () => {
         return (
             <div
+                className="d-flex flex-row rounded p-2 gap-3"
                 style={{
-                    backgroundImage: "linear-gradient(#EEE,#555)",
+                    backgroundColor: "rgba(255, 255, 255, 0.3)",
                 }}
-                className="col-4 bg-info"
             >
-                <Image
-                    src={require("../public/calender.png")}
-                    alt="calender"
-                    width={200}
-                />
+                <div>
+                    <div
+                        style={{
+                            backgroundImage: 'url("/calendar.png")',
+                            paddingTop: 20,
+                            paddingLeft: 15,
+                            paddingRight: 15,
+                            backgroundRepeat: "no-repeat",
+                            height: 110,
+                            width: 85,
+                            backgroundSize: "100%",
+                        }}
+                    >
+                        <div
+                            style={{ fontSize: 12, marginTop: 5 }}
+                            className="text-center"
+                        >
+                            AHAD
+                        </div>
+                        <div
+                            style={{ fontSize: 25, marginTop: -10 }}
+                            className="text-center"
+                        >
+                            <div
+                                className="text-center text-white"
+                                style={{ fontSize: 40 }}
+                            >
+                                20
+                            </div>
+                            <div
+                                className="text-center text-white"
+                                style={{ fontSize: 8, marginTop: -10 }}
+                            >
+                                RABIUL AKHIR
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        className="text-center text-white"
+                        style={{ fontSize: 20, marginTop: -5 }}
+                    >
+                        1445 H
+                    </div>
+                </div>
+                <div>
+                    <div
+                        style={{
+                            backgroundImage: 'url("/calendar.png")',
+                            paddingTop: 20,
+                            paddingLeft: 15,
+                            paddingRight: 15,
+                            backgroundRepeat: "no-repeat",
+                            height: 110,
+                            width: 85,
+                            backgroundSize: "100%",
+                        }}
+                    >
+                        <div
+                            style={{ fontSize: 12, marginTop: 5 }}
+                            className="text-center"
+                        >
+                            AHAD
+                        </div>
+                        <div
+                            style={{ fontSize: 25, marginTop: -10 }}
+                            className="text-center"
+                        >
+                            <div
+                                className="text-center text-white"
+                                style={{ fontSize: 40 }}
+                            >
+                                20
+                            </div>
+                            <div
+                                className="text-center text-white"
+                                style={{ fontSize: 8, marginTop: -10 }}
+                            >
+                                RABIUL AKHIR
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        className="text-center text-white"
+                        style={{ fontSize: 20, marginTop: -5 }}
+                    >
+                        1445 H
+                    </div>
+                </div>
             </div>
         );
     };
 
     const renderCenterInformation = () => {
         return (
-            <div className="col-8">
+            <div className="flex-grow-1 align-content-stretch">
                 <div
-                    className="d-flex flex-row p-4 rounded align-items-center"
+                    className="d-flex flex-row rounded p-3 align-items-center justify-content-center"
                     style={{
                         backgroundColor: "rgba(255, 255, 255, 0.3)",
                     }}
@@ -32,21 +115,58 @@ const Index = () => {
                     <Image
                         src={require("../public/kubah.png")}
                         alt="Kubah"
-                        width={50}
+                        width={90}
                     />
                     <div style={{ marginLeft: 25 }} className="text-center">
-                        <div style={{ fontSize: 25, fontWeight: "bold" }}>
+                        <div
+                            style={{
+                                fontSize: 70,
+                                fontFamily: "Bismillah Script",
+                            }}
+                        >
                             Mesjid Al-Ikhlas
                         </div>
-                        <div className="text-white">
-                            PESONA TELAGA CIBINONG RT 004 RW 02, KEL HARAPAN
-                            JAYA
-                        </div>
-                        <div className="text-white">
-                            CIBINONG - KABUPATEN BOGOR
+                        <div style={{ marginTop: -15 }}>
+                            <div
+                                className="text-white"
+                                style={{ fontSize: 13 }}
+                            >
+                                PESONA TELAGA CIBINONG RT 004 RW 02, KEL HARAPAN
+                                JAYA
+                            </div>
+                            <div
+                                className="text-white"
+                                style={{ fontSize: 13 }}
+                            >
+                                CIBINONG - KABUPATEN BOGOR
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        );
+    };
+
+    const renderClockInformation = () => {
+        return (
+            <div
+                style={{
+                    backgroundColor: "rgba(255, 255, 255, 0.3)",
+                }}
+                className="d-flex align-items-center justify-content-between p-3 rounded"
+            >
+                <Image
+                    src={require("../public/timecloud.png")}
+                    alt="Kubah"
+                    width={80}
+                />
+                <Clock
+                    className="text-white ms-2"
+                    format={"HH:mm:ss"}
+                    style={{ fontSize: 70 }}
+                    ticking={true}
+                    timezone={"Asia/Jakarta"}
+                />
             </div>
         );
     };
@@ -60,8 +180,8 @@ const Index = () => {
                     paddingLeft: 14,
                     paddingRight: 14,
                     backgroundRepeat: "no-repeat",
-                    // height: 500,
-                    width: 200,
+                    height: 440,
+                    width: 180,
                     backgroundSize: "100%",
                 }}
                 className="d-flex align-items-end"
@@ -85,7 +205,13 @@ const Index = () => {
                         </div>
                     </div>
                     <div className="d-flex justify-content-between align-items-center">
-                        <div className="text-white">ISYA</div>
+                        <div className="text-white m-auto">
+                            <Image
+                                src={require("../public/bulan-isya.png")}
+                                alt="Kubah"
+                                width={30}
+                            />
+                        </div>
                         <div className="text-white" style={{ fontSize: 12 }}>
                             <div className="fs-1">00:14</div>
                             <div style={{ fontSize: 10 }}>
@@ -108,20 +234,22 @@ const Index = () => {
                 />
                 <div className="row w-100">
                     <div className="col-6">
-                        <Image
-                            src={require("../public/kubah2.png")}
-                            alt="Kubah"
-                            width={60}
-                        />
+                        <div className="d-flex justify-content-start">
+                            <Image
+                                src={require("../public/kubah2.png")}
+                                alt="Kubah"
+                                width={60}
+                            />
+                        </div>
                         <div
-                            className="d-flex flex-row p-4 align-items-center"
+                            className="d-flex flex-row p-2 align-items-center"
                             style={{
-                                backgroundImage: "linear-gradient(#EEE,#555)",
-                                borderStartEndRadius: 80,
+                                backgroundColor: "#EAD3DB",
+                                borderStartEndRadius: 400,
                             }}
                         >
                             <Image
-                                src={require("../public/kubah.png")}
+                                src={require("../public/calendar-agenda.png")}
                                 alt="Kubah"
                                 width={35}
                             />
@@ -144,9 +272,9 @@ const Index = () => {
                             />
                         </div>
                         <div
-                            className="d-flex flex-row p-4 align-items-center"
+                            className="d-flex flex-row p-2 align-items-center"
                             style={{
-                                backgroundImage: "linear-gradient(#EEE,#555)",
+                                backgroundColor: "#EAD3DB",
                                 borderStartStartRadius: 80,
                             }}
                         >
@@ -159,7 +287,7 @@ const Index = () => {
                                 Isra Mi'raj 21 hari lagi
                             </p>
                             <Image
-                                src={require("../public/kubah.png")}
+                                src={require("../public/calendar-agenda.png")}
                                 alt="Kubah"
                                 width={35}
                             />
@@ -176,11 +304,11 @@ const Index = () => {
                 <div
                     style={{
                         backgroundImage: 'url("/kas.png")',
-                        paddingTop: 85,
+                        paddingTop: 80,
                         paddingLeft: 15,
                         paddingRight: 15,
                         backgroundRepeat: "no-repeat",
-                        // height: 400,
+                        height: 440,
                         width: 180,
                         backgroundSize: "100%",
                     }}
@@ -258,8 +386,10 @@ const Index = () => {
                             paddingTop: 5,
                             paddingBottom: 5,
                             marginBottom: 5,
+                            borderEndEndRadius: 1000,
+                            borderEndStartRadius: 1000,
                         }}
-                        className="text-center rounded"
+                        className="text-center rounded-top"
                     >
                         <div className="fs-7 text-white">
                             Rp 2.000.000.000,-
@@ -270,48 +400,36 @@ const Index = () => {
         );
     };
 
-    const renderClockInformation = () => {
+    const renderSchedules = (name, time, iconMonth, isActive = false) => {
         return (
-            <div
-                className="col-2 rounded"
-                style={{
-                    backgroundColor: "rgba(255, 255, 255, 0.3)",
-                }}
-            >
-                <Clock
-                    format={"HH:mm:ss"}
-                    ticking={true}
-                    timezone={"Asia/Jakarta"}
-                    className="text-white fs-3"
-                />
-            </div>
-        );
-    };
-
-    const renderSchedules = (name, time) => {
-        return (
-            <div className="col-2">
-                <div>
+            <div className="flex-fill">
+                <div
+                    className="card-header d-flex justify-content-between p-2 rounded-top fs-4"
+                    style={{
+                        fontFamily: "Roboto",
+                        backgroundColor: isActive
+                            ? "rgba(50,205,50,0.4)"
+                            : "rgba(255, 255, 255, 0.3)",
+                        color: "white",
+                    }}
+                >
+                    {name}
+                    <Image src={iconMonth} alt="Kubah" width={30} />
+                </div>
+                <div
+                    className="card-body text-center rounded-bottom p-2"
+                    style={{
+                        backgroundColor: isActive
+                            ? "rgba(50,205,50,0.5)"
+                            : "rgba(255, 255, 255, 0.2)",
+                    }}
+                >
+                    <h5 className="card-title fs-1 text-white">{time}</h5>
                     <div
-                        className="card-header d-flex justify-content-between"
-                        style={{
-                            fontFamily: "Roboto",
-                            backgroundColor: "rgba(255, 255, 255, 0.3)",
-                            color: "white",
-                        }}
+                        className="text-end text-white"
+                        style={{ fontSize: 10 }}
                     >
-                        {name}
-                        <Image
-                            src={require("../public/bulan-sabit.png")}
-                            alt="Kubah"
-                            width={20}
-                        />
-                    </div>
-                    <div
-                        className="card-body text-center"
-                        style={{ backgroundColor: "rgba(255, 255, 255, 0.3)" }}
-                    >
-                        <h5 className="card-title">{time}</h5>
+                        Iqomah 00:10
                     </div>
                 </div>
             </div>
@@ -335,34 +453,79 @@ const Index = () => {
                     objectFit="cover"
                 />
             </div>
-            <div className="container-fluid">
-                <div className="row p-3 align-items-center">
+            <div className="p-3">
+                <div className="d-flex gap-2">
                     {renderLeftInformation()}
                     {renderCenterInformation()}
                     {renderClockInformation()}
                 </div>
-                <div className="row bg-warning">
-                    <div className="col-3">{renderLeftMosque()}</div>
-                    <div className="col-6">{renderCenterBismillah()}</div>
-                    <div className="col-3">{renderRightMosque()}</div>
+                <div className="d-flex flex-row gap-2 align-items-center">
+                    <div className="flex-fill">{renderLeftMosque()}</div>
+                    <div className="flex-fill text-center">
+                        {renderCenterBismillah()}
+                    </div>
+                    <div className="flex-fill">{renderRightMosque()}</div>
                 </div>
-                <div className="row">
-                    {renderSchedules("IMSYAK", "04:09")}
-                    {renderSchedules("SHUBUH", "04:09")}
-                    {renderSchedules("SYURUQ", "04:09")}
-                    {renderSchedules("DZUHUR", "04:09")}
-                    {renderSchedules("ASHAR", "04:09")}
-                    {renderSchedules("MAGHRIB", "04:09")}
-                    {renderSchedules("ISYA", "04:09")}
+            </div>
+            <div
+                className="d-flex flex-column fixed-bottom"
+                style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
+            >
+                <div className="d-flex flex-row gap-2 p-3">
+                    {renderSchedules(
+                        "IMSYAK",
+                        "04:09",
+                        require("../public/bulan-imsyak.png"),
+                        false
+                    )}
+                    {renderSchedules(
+                        "SHUBUH",
+                        "04:09",
+                        require("../public/bulan-shubuh.png"),
+                        false
+                    )}
+                    {renderSchedules(
+                        "SYURUQ",
+                        "04:09",
+                        require("../public/bulan-isya.png"),
+                        false
+                    )}
+                    {renderSchedules(
+                        "DZUHUR",
+                        "04:09",
+                        require("../public/bulan-dzuhur.png"),
+                        false
+                    )}
+                    {renderSchedules(
+                        "ASHAR",
+                        "04:09",
+                        require("../public/bulan-ashar.png"),
+                        false
+                    )}
+                    {renderSchedules(
+                        "MAGHRIB",
+                        "04:09",
+                        require("../public/bulan-magrib.png"),
+                        false
+                    )}
+                    {renderSchedules(
+                        "ISYA",
+                        "04:09",
+                        require("../public/bulan-isya.png"),
+                        true
+                    )}
                 </div>
-                <div
-                    className="row fixed-bottom w-100"
-                    style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
+                <Marquee
+                    className="fs-4 text-white p-2"
+                    speed={50}
+                    style={{
+                        backgroundColor: "rgba(255, 255, 255, 0.1)",
+                        fontWeight: "bolder",
+                    }}
+                    gradient={false}
                 >
-                    <Marquee>
-                        RUNNING TEKS "RAMADHAN TIBA RAMADHAN TIBA"
-                    </Marquee>
-                </div>
+                    RUNNING TEKS "RAMADHAN TIBA RAMADHAN TIBA"
+                </Marquee>
             </div>
         </>
     );

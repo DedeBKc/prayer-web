@@ -17,6 +17,12 @@ function MyApp({ Component, pageProps }) {
                     href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
                     rel="stylesheet"
                 />
+                <link
+                    href="https://fonts.cdnfonts.com/css/bismillah-script"
+                    rel="stylesheet"
+                />
+                <title>Jadwal Sholat</title>
+                <link rel="icon" href="kubah.png" type="image/png"></link>
             </Head>
             <Layout>
                 <Component {...pageProps} />
